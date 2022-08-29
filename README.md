@@ -1,8 +1,12 @@
-Idris 2
+Idris 2 文档中文翻译
 =======
 
 [![Documentation Status](https://readthedocs.org/projects/idris2/badge/?version=latest)](https://idris2.readthedocs.io/en/latest/?badge=latest)
 [![Build Status](https://github.com/idris-lang/Idris2/actions/workflows/ci-idris2.yml/badge.svg)](https://github.com/idris-lang/Idris2/actions/workflows/ci-idris2.yml)
+
+<a href="https://weblate.grass.work:30443/engage/idris2/zh_Hans/">
+<img src="https://weblate.grass.work:30443/widgets/idris2/zh_Hans/287x66-white.png" alt="翻译状态" />
+</a>
 
 [Idris 2](https://idris-lang.org/) is a purely functional programming language
 with first class types.
