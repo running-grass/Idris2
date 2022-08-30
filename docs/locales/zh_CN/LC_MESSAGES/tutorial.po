@@ -8,15 +8,16 @@ msgstr ""
 "Project-Id-Version: Idris2 0.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-08-29 17:33+0800\n"
-"PO-Revision-Date: 2022-08-29 09:22+0000\n"
-"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"PO-Revision-Date: 2022-09-03 13:48+0000\n"
+"Last-Translator: grass <467195537@qq.com>\n"
+"Language-Team: Chinese (Simplified) <https://weblate.grass.work:30443/"
+"projects/idris-lang/idris2-docs-tutorial/zh_Hans/>\n"
 "Language: zh_CN\n"
-"Language-Team: Chinese (Simplified) "
-"<https://weblate.grass.work:30443/projects/idris/tutorial/zh_Hans/>\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 4.13.1\n"
 "Generated-By: Babel 2.10.3\n"
 
 #: ../source/tutorial/conclusions.rst:5 34646810b6a84466935b96ac907dccbf
@@ -177,7 +178,7 @@ msgstr "关于CC0的更多信息，可以在网上找到：http://creativecommon
 
 #: ../source/tutorial/interactive.rst:5 e5462ff60e85459cac511d2761901bd9
 msgid "Interactive Editing"
-msgstr ""
+msgstr "交互式编辑"
 
 #: ../source/tutorial/interactive.rst:7 d20ee02283fa4d4a95eadbd90b838826
 msgid ""
@@ -1429,7 +1430,7 @@ msgstr ""
 
 #: ../source/tutorial/introduction.rst:5 fb15bf84709b45a49fe8efbda8ba2c3b
 msgid "Introduction"
-msgstr "简介"
+msgstr "介绍"
 
 #: ../source/tutorial/introduction.rst:7 aa49775fb1f3472b9cb0ab0c3f8e50f3
 msgid ""
@@ -2867,7 +2868,7 @@ msgstr "从源代码安装"
 
 #: ../source/tutorial/starting.rst:16 ca11ab4654d6440fac6dbe8a407f71a4
 msgid "Prerequisites"
-msgstr "先决条件"
+msgstr "前置条件"
 
 #: ../source/tutorial/starting.rst:18 4db2347757684e46a346fefe3d55a49c
 msgid ""
@@ -5041,4 +5042,3 @@ msgstr ""
 
 #~ msgid "then ``:cs 96 xs`` will give:"
 #~ msgstr ""
-
