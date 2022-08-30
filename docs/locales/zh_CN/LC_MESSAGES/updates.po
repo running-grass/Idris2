@@ -8,10 +8,10 @@ msgstr ""
 "Project-Id-Version: Idris2 0.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-08-28 21:56+0800\n"
-"PO-Revision-Date: 2022-08-29 09:22+0000\n"
-"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"PO-Revision-Date: 2022-09-03 13:48+0000\n"
+"Last-Translator: grass <467195537@qq.com>\n"
 "Language-Team: Chinese (Simplified) <https://weblate.grass.work:30443/"
-"projects/idris/updates/zh_Hans/>\n"
+"projects/idris-lang/idris2-docs-updates/zh_Hans/>\n"
 "Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -484,7 +484,7 @@ msgid ""
 "``public export`` modifiers, now refer to the visibility of names from "
 "other *namespaces*, rather than other *files*."
 msgstr ""
-"由  ``private`` 、 ``export`` 和 ``public export`` "
+"由 ``private`` 、 ``export`` 和 ``public export`` "
 "修饰符控制的可见性规则现在指的是来自其他 *命名空间* 的名称的可见性，"
 "而不是其他 *文件* 。"
 
@@ -494,9 +494,7 @@ msgstr "因此，如果您有以下内容，且所有内容都在同一个文件
 
 #: ../source/updates/updates.rst:321 bd284fcef8b645c5a587044c107d90a4
 msgid "...then ``bVisible`` can access ``aVisible``, but not ``aHidden``."
-msgstr ""
-"...然后 ``bVisible`` 可以访 ``aVisible`` ，但不能访问\n"
-"``aHidden`` 。"
+msgstr "...然后 ``bVisible`` 可以访 ``aVisible`` ，但不能访问 ``aHidden`` 。"
 
 #: ../source/updates/updates.rst:323 1818d75b855d4fc48f0a2ecb78f17b0d
 msgid ""
