@@ -8,10 +8,10 @@ msgstr ""
 "Project-Id-Version: Idris2 0.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-08-28 21:56+0800\n"
-"PO-Revision-Date: 2022-08-29 09:23+0000\n"
-"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"PO-Revision-Date: 2022-09-03 13:48+0000\n"
+"Last-Translator: grass <467195537@qq.com>\n"
 "Language-Team: Chinese (Simplified) <https://weblate.grass.work:30443/"
-"projects/idris/implementation/zh_Hans/>\n"
+"projects/idris-lang/idris2-docs-implementation/zh_Hans/>\n"
 "Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -856,7 +856,7 @@ msgstr ""
 
 #: ../source/implementation/overview.rst:11 5a281c2007114102ab8c3035cfa605d1
 msgid "Introduction"
-msgstr "简介"
+msgstr "介绍"
 
 #: ../source/implementation/overview.rst:13 3d4d307282fc4c9c81b72d1461c490f4
 msgid ""
