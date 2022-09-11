@@ -8,10 +8,10 @@ msgstr ""
 "Project-Id-Version: Idris2 0.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-08-28 21:56+0800\n"
-"PO-Revision-Date: 2022-08-29 09:22+0000\n"
-"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"PO-Revision-Date: 2022-09-11 07:49+0000\n"
+"Last-Translator: grass <467195537@qq.com>\n"
 "Language-Team: Chinese (Simplified) <https://weblate.grass.work:30443/"
-"projects/idris/backends/zh_Hans/>\n"
+"projects/idris-lang/idris2-docs-backends/zh_Hans/>\n"
 "Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -285,7 +285,7 @@ msgstr ""
 
 #: ../source/backends/backend-cookbook.rst:142 146cc318728147c2bf7fb14af8261317
 msgid "``Int``"
-msgstr ""
+msgstr "``Int``"
 
 #: ../source/backends/backend-cookbook.rst:143 490be6a7ebce4cedb224d13f47e15583
 msgid "``Integer`` (arbitrary precision)"
@@ -297,7 +297,7 @@ msgstr ""
 
 #: ../source/backends/backend-cookbook.rst:145 765282bff8c5450f94d68c3dc883a3ad
 msgid "``Char``"
-msgstr ""
+msgstr "``Char``"
 
 #: ../source/backends/backend-cookbook.rst:146 16b8e204b26349eba8e4d53001264116
 msgid "``String``"
