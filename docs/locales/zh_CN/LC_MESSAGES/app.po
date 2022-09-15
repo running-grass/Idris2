@@ -8,10 +8,10 @@ msgstr ""
 "Project-Id-Version: Idris2 0.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-08-28 21:56+0800\n"
-"PO-Revision-Date: 2022-08-29 09:22+0000\n"
-"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"PO-Revision-Date: 2022-09-16 07:30+0000\n"
+"Last-Translator: grass <467195537@qq.com>\n"
 "Language-Team: Chinese (Simplified) <https://weblate.grass.work:30443/"
-"projects/idris/app/zh_Hans/>\n"
+"projects/idris-lang/idris2-docs-app/zh_Hans/>\n"
 "Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -475,7 +475,7 @@ msgstr ""
 
 #: ../source/app/linear.rst:2 c67340197c1442e9802635c51be76c68
 msgid "Linear Resources"
-msgstr ""
+msgstr "线性资源"
 
 #: ../source/app/linear.rst:4 71c121fa069e4727a81dddd16123125c
 msgid ""
@@ -486,30 +486,35 @@ msgid ""
 "allowed. The bind operator for ``App`` is defined as follows (not via "
 "``Monad``):"
 msgstr ""
+"我们已经介绍了 ``App`` 用于编写交互式程序，使用接口来限制允许哪些操作，"
+"但还没有看到 ``Path`` "
+"参数的作用。其目的是限制程序何时可以抛出异常，以了解允许线性资源使用的位置。 "
+"``App`` 的绑定运算符定义如下（不是通过 ``Monad`` ）："
 
 #: ../source/app/linear.rst:20 74926b183e7b4ff699fe2bc157af7da2
 msgid ""
 "The intuition behind this type is that, when sequencing two ``App`` "
 "programs:"
-msgstr ""
+msgstr "这种类型背后的直觉是，当对两个 ``App`` 程序进行排序时："
 
 #: ../source/app/linear.rst:23 04e9559673ec45c4b92042ddb5c7dd4b
 msgid ""
 "if the first action might throw an exception, then the whole program "
 "might throw."
-msgstr ""
+msgstr "如果第一个动作可能抛出异常，那么整个程序就可能会抛出异常。"
 
 #: ../source/app/linear.rst:25 693b6b1973544db6b03fd3cffe56d42e
 msgid ""
 "if the first action cannot throw an exception, the second action can "
 "still throw, and the program as a whole can throw."
-msgstr ""
+msgstr "如果第一个动作不能抛出异常，那么第二个动作仍然可以抛出，整个程序也就会抛出异"
+"常。"
 
 #: ../source/app/linear.rst:27 8103ba77dc984c71aa3443e35aa53500
 msgid ""
 "if neither action can throw an exception, the program as a whole cannot "
 "throw."
-msgstr ""
+msgstr "如果两个动作都不会抛出异常，则整个程序都不会抛出异常。"
 
 #: ../source/app/linear.rst:30 d94402ec63234a9db70ee3732e29e665
 msgid ""
@@ -519,17 +524,21 @@ msgid ""
 " subprograms with linear variables, we can use an alternative bind "
 "operator which guarantees to run the continuation exactly once:"
 msgstr ""
+"类型中详细的原因是它对具有不同 ``Path`` 的程序进行排序很有用，但在这样做时，"
+"我们必须准确计算得到的 ``Path`` 。然后，如果我们想用线性变量对子程序进行排序"
+"，我们可以使用另一种绑定运算符来保证只运行一次延续："
 
 #: ../source/app/linear.rst:42 61315ee54bb348fd90f29f8637c30e4d
 msgid ""
 "To illustrate the need for ``bindL``, we can try writing a program which "
 "tracks the state of a secure data store, which requires logging in before"
 " reading the data."
-msgstr ""
+msgstr "为了说明 ``bindL`` 的必要性，我们可以尝试编写一个程序来跟踪安全数据存储的状态"
+"，这需要在读取数据之前登录。"
 
 #: ../source/app/linear.rst:47 16a8096996154f0d8bfb981403251948
 msgid "Example: a data store requiring a login"
-msgstr ""
+msgstr "示例：需要登录的数据存储"
 
 #: ../source/app/linear.rst:49 336039cf7b65413084dfa25de35f4b2f
 msgid ""
@@ -538,29 +547,32 @@ msgid ""
 " a secure data store in which a user must log in before getting access to"
 " some secret data. This system can be in one of two states:"
 msgstr ""
+"许多软件组件依赖于某种形式的状态，并且可能存在仅在特定状态下有效的操作。例如"
+"，考虑一个安全的数据存储，用户必须在其中登录才能访问某些秘密数据。该系统可以"
+"处于以下两种状态之一："
 
 #: ../source/app/linear.rst:54 2da483d3685546c6bf1b95b68f9b265d
 msgid "``LoggedIn``, in which the user is allowed to read the secret"
-msgstr ""
+msgstr "``LoggedIn`` ，允许用户在其中读取秘密"
 
 #: ../source/app/linear.rst:55 f32d8621744e4ea1a0f191457dce7d16
 msgid "``LoggedOut``, in which the user has no access to the secret"
-msgstr ""
+msgstr "``LoggedOut`` ，用户无权访问机密"
 
 #: ../source/app/linear.rst:57 b8b5ad01928e4c68916f7f97891e079f
 msgid ""
 "We can provide commands to log in, log out, and read the data, as "
 "illustrated in the following diagram:"
-msgstr ""
+msgstr "我们可以提供登录、注销和读取数据的命令，如下图所示："
 
 #: ../source/app/linear.rst:60 b813459616f14a30868990f0bfa65f0c
 msgid "|login|"
-msgstr ""
+msgstr "|login|"
 
 #: ../source/app/linear.rst:126 4d8aac8fd0184086b065fefc5666414b
 #: 514a1f0eeba24474b0d00a20e2503546
 msgid "login"
-msgstr ""
+msgstr "登录"
 
 #: ../source/app/linear.rst:62 3dbdb0eed22d465cb4c0d4925b46fc3b
 msgid ""
@@ -570,13 +582,17 @@ msgid ""
 "``readSecret`` command is only valid when the system is in the "
 "``LoggedIn`` state."
 msgstr ""
+"``login`` 命令，如果成功，将整个系统状态从 ``LoggedOut`` 移动到 ``LoggedIn`` "
+"。 ``logout`` 命令将状态从 ``LoggedIn`` 移动到 ``LoggedOut`` 。最重要的是， "
+"``readSecret`` 命令仅在系统处于 ``LoggedIn`` 状态时才有效。"
 
 #: ../source/app/linear.rst:67 b5e64d04f68b49aa89e7cd016e792d34
 msgid ""
 "We can represent the state transitions using functions with linear types."
 " To begin, we define an interface for connecting to and disconnecting "
 "from a store:"
-msgstr ""
+msgstr "我们可以使用线性类型的函数来表示状态转换。首先，我们定义一个用于连接和断开商"
+"店的接口："
 
 #: ../source/app/linear.rst:78 c07f3a79efc94e7780c7850effa9b435
 msgid ""
