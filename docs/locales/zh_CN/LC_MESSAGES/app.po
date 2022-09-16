@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: Idris2 0.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-08-28 21:56+0800\n"
-"PO-Revision-Date: 2022-09-16 07:30+0000\n"
+"PO-Revision-Date: 2022-09-17 08:08+0000\n"
 "Last-Translator: grass <467195537@qq.com>\n"
 "Language-Team: Chinese (Simplified) <https://weblate.grass.work:30443/"
 "projects/idris-lang/idris2-docs-app/zh_Hans/>\n"
@@ -595,29 +595,39 @@ msgstr "我们可以使用线性类型的函数来表示状态转换。首先，
 "店的接口："
 
 #: ../source/app/linear.rst:78 c07f3a79efc94e7780c7850effa9b435
+#, fuzzy
 msgid ""
 "Neither ``connect`` nor ``disconnect`` throw, as shown by generalising "
 "over ``l``. Once we have a connection, we can use the following functions"
 " to access the resource directly:"
 msgstr ""
+"``connect`` 和 ``disconnect`` 都不会抛出，如对 ``l`` "
+"的概括所示。建立连接后，我们可以使用以下函数直接访问资源："
 
 #: ../source/app/linear.rst:94 ec97e173434647f58f27977a5397cd9d
+#, fuzzy
 msgid ""
 "``Res`` is defined in the Prelude, since it is commonly useful.  It is a "
 "dependent pair type, which associates a value with a linear resource. "
 "We'll leave the other definitions abstract, for the purposes of this "
 "introductory example."
 msgstr ""
+"``Res`` 是在 Prelude 中定义的，因为它通常很有用。它是一种依赖对类型，将值与线"
+"性资源相关联。出于这个介绍性示例的目的，我们将保留其他定义抽象。"
 
 #: ../source/app/linear.rst:99 6129eae5431b410fa5f213a3509da842
+#, fuzzy
 msgid ""
 "The following listing shows a complete program accessing the store, which"
 " reads a password, accesses the store if the password is correct and "
 "prints the secret data. It uses ``let (>>=) = bindL`` to redefine "
 "``do``-notation locally."
 msgstr ""
+"下面的清单显示了一个访问存储的完整程序，它读取密码，如果密码正确则访问存储并"
+"打印秘密数据。它使用 ``let (>>=) = bindL`` 在本地重新定义 ``do``-notation。"
 
 #: ../source/app/linear.rst:119 ba10d31af905426e90d3bb73a8ff2fed
+#, fuzzy
 msgid ""
 "If we omit the ``let (>>=) = bindL``, it will use the default ``(>>=)`` "
 "operator, which allows the continuation to be run multiple times, which "
@@ -626,12 +636,18 @@ msgid ""
 "``putStr`` because they are guaranteed not to throw by the ``Path`` "
 "parameter in their types."
 msgstr ""
+"如果我们省略 ``let (>>=) = bindL``，它将使用默认的 ``(>>=)`` "
+"操作符，它允许连续运行多次，这意味着 ``s `` 不能保证被线性访问，并且 "
+"``storeProg`` 不会进行类型检查。我们可以安全地使用 ``getStr`` 和 ``putStr`` "
+"因为它们保证不会被它们的类型中的 ``Path`` 参数抛出。"
 
 #: ../source/app/linear.rst:130 16a59a302f574fa0a743dc875b04f637
+#, fuzzy
 msgid "App1: Linear Interfaces"
-msgstr ""
+msgstr "App1：线性接口"
 
 #: ../source/app/linear.rst:132 a84075c3fd214d90ac3b9e12d1f747a1
+#, fuzzy
 msgid ""
 "Adding the ``bindL`` function to allow locally rebinding the ``(>>=)`` "
 "operator allows us to combine existing linear resource programs with "
@@ -642,29 +658,41 @@ msgid ""
 "data store uses primitive functions (which we left undefined in any case)"
 " to access the store."
 msgstr ""
+"添加 ``bindL`` 函数以允许在本地重新绑定 ``(>>=)`` "
+"运算符允许我们将现有的线性资源程序与 ``App`` 中的操作结合起来 - "
+"至少是那些不会抛出的。尽管如此，与 ``App`` 更直接地互操作会很好。定义接口的一"
+"个优点是我们可以为不同的上下文提供多种实现，但是我们的数据存储实现使用原始函"
+"数（在任何情况下我们都未定义）来访问存储。"
 
 #: ../source/app/linear.rst:141 d520685d209e4c47a9aa7500db3bb4a8
+#, fuzzy
 msgid ""
 "To allow control over linear resources, ``Control.App`` provides an "
 "alternative parameterised type ``App1``:"
-msgstr ""
+msgstr "为了允许控制线性资源，“Control.App”提供了一个替代的参数化类型“App1”："
 
 #: ../source/app/linear.rst:149 95830cb8e95f4ded895f4c147b01e959
+#, fuzzy
 msgid ""
 "There is no need for a ``Path`` argument, since linear programs can never"
 " throw. The ``Usage`` argument states whether the value returned is to be"
 " used once, or has unrestricted usage, with the default in ``App1`` being"
 " to use once:"
 msgstr ""
+"不需要 ``Path`` 参数，因为线性程序永远不会抛出。 ``Usage`` "
+"参数说明返回的值是使用一次还是无限制使用，``App1`` 中的默认值是使用一次："
 
 #: ../source/app/linear.rst:158 85a885101b5e4db5ac41f1b8b37507d5
+#, fuzzy
 msgid ""
 "The main difference from ``App`` is the ``(>>=)`` operator, which has a "
 "different multiplicity for the variable bound by the continuation "
 "depending on the usage of the first action:"
-msgstr ""
+msgstr "与 ``App`` 的主要区别是 ``(>>=)`` "
+"运算符，根据第一个动作的用法，它对由延续绑定的变量具有不同的多重性："
 
 #: ../source/app/linear.rst:171 9975ae63407043b0b3f679cd465bf8d7
+#, fuzzy
 msgid ""
 "``Cont1Type`` returns a continuation which uses the argument linearly, if"
 " the first ``App1`` program has usage ``One``, otherwise it returns a "
@@ -672,40 +700,57 @@ msgid ""
 "there may be linear resources in scope, the continuation is run exactly "
 "once and there can be no exceptions thrown."
 msgstr ""
+"``Cont1Type`` 返回一个线性使用参数的延续，如果第一个 ``App1`` 程序使用 ``One`"
+"`，否则它返回一个参数使用不受限制的延续。无论哪种方式，因为范围内可能存在线性"
+"资源，所以延续只运行一次并且不会抛出异常。"
 
 #: ../source/app/linear.rst:177 66921b1528674047b0cc87d4740f1743
+#, fuzzy
 msgid ""
 "Using ``App1``, we can define all of the data store operations in a "
 "single interface, as shown in the following listing. Each operation other"
 " than ``disconnect`` returns a `linear` resource."
-msgstr ""
+msgstr "使用“App1”，我们可以在单个界面中定义所有数据存储操作，如下面的清单所示。除“断"
+"开”之外的每个操作都返回一个“线性”资源。"
 
 #: ../source/app/linear.rst:193 f2c1369cd97f40689634b41fd1ac4fa7
+#, fuzzy
 msgid "We can explicitly move between ``App`` and ``App1``:"
-msgstr ""
+msgstr "我们可以在 ``App`` 和 ``App1`` 之间显式移动："
 
 #: ../source/app/linear.rst:200 01b1e4a37b1c4a288acf3472c8e502dd
+#, fuzzy
 msgid ""
 "We can run an ``App`` program using ``app``, inside ``App1``, provided "
 "that it is guaranteed not to throw. Similarly, we can run an ``App1`` "
 "program using ``app1``, inside ``App``, provided that the value it "
 "returns has unrestricted usage. So, for example, we can write:"
 msgstr ""
+"我们可以在 `App1` 中使用 `app` 运行一个 `App` "
+"程序，前提是它保证不会抛出异常。同样，我们可以在 ``App`` 中使用``app1`` "
+"来运行``App1`` "
+"程序，前提是它返回的值可以不受限制地使用。因此，例如，我们可以这样写："
 
 #: ../source/app/linear.rst:214 96a6cdbd7f084805b62ad21e252670cb
+#, fuzzy
 msgid ""
 "This uses ``app1`` to state that the body of the program is linear, then "
 "``app`` to state that the ``putStr`` operation is in ``App``. We can see "
 "that ``connect`` returns a linear resource by inspecting the hole "
 "``what_next``, which also shows that we are running inside ``App1``:"
 msgstr ""
+"这使用 ``app1`` 来声明程序的主体是线性的，然后 ``app`` 来声明 ``putStr`` "
+"操作在 ``App`` 中。我们可以通过检查孔洞“what_next”看到“connect”返回一个线性资"
+"源，这也表明我们正在“App1”内部运行："
 
 #: ../source/app/linear.rst:227 fedb4ca58e474230981d24424567fe39
+#, fuzzy
 msgid ""
 "For completeness, one way to implement the interface is as follows, with "
 "hard coded password and internal data:"
-msgstr ""
+msgstr "为了完整起见，实现接口的一种方法如下，使用硬编码的密码和内部数据："
 
 #: ../source/app/linear.rst:247 93054fe65c524ed4b9ab84960ca87139
+#, fuzzy
 msgid "Then we can run it in ``main``:"
-msgstr ""
+msgstr "然后我们可以在 ``main`` 中运行它："
